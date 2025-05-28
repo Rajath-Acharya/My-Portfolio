@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-const SectionTitle = ({ children, id }) => {
+const SectionTitle = ({ children, id }: { children: ReactNode; id: string }) => {
   return (
     <motion.h2
       id={id}

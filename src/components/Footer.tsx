@@ -1,5 +1,5 @@
 import React from 'react';
-import { personalInfo } from '../data/portfolioData.jsx';
+import { personalInfo } from '../data/portfolioData';
 import { FaHeart } from 'react-icons/fa';
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
           Designed & Built with <FaHeart className="inline text-accent-2" /> by {personalInfo.name}
         </p>
         <p className="text-xs text-text-secondary font-mono mt-1">
-          © {currentYear} Aditi Arya. All rights reserved.
+          © {currentYear} Rajath Acharya. All rights reserved.
         </p>
       </div>
     </footer>

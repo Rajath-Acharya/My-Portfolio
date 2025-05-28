@@ -1,12 +1,12 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import { leadershipAndInvolvement } from '../data/portfolioData.jsx';
+import { leadershipAndInvolvement } from '../data/portfolioData';
 import { FaAward, FaUsers, FaBriefcase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const experienceItemVariants = {
   hidden: { opacity: 0, y: 30 }, // Adjusted y for a slightly different entry
-  visible: (i) => ({
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -18,7 +18,7 @@ const experienceItemVariants = {
 };
 
 const Experience = () => {
-  const getIcon = (title) => {
+  const getIcon = (title: string) => {
     const lowerTitle = title.toLowerCase();
     const iconSize = "w-4 h-4 sm:w-5 sm:h-5"; // Centralized icon size
     if (lowerTitle.includes("partner")) return <FaBriefcase className={`text-accent-1 ${iconSize}`} />;

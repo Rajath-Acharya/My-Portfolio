@@ -1,12 +1,12 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import { personalInfo, education } from '../data/portfolioData.jsx';
+import { personalInfo, education } from '../data/portfolioData';
 import { motion } from 'framer-motion';
 import { FaUniversity, FaSchool } from 'react-icons/fa'; // Example icons
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: i => ({
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -30,10 +30,10 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-text-secondary leading-relaxed">
-            Hello! I'm Aditi, a driven Full Stack Developer with a strong foundation in computer science and a knack for crafting efficient, user-centric applications. My journey into tech is fueled by a desire to learn, innovate, and contribute to projects that make a difference. I thrive in collaborative environments and am always excited to tackle new challenges.
+            Hello! I'm Rajath, a driven Full Stack Developer with a strong foundation in computer science and a knack for crafting efficient, user-centric applications. My journey into tech is fueled by a desire to learn, innovate, and contribute to projects that make a difference. I thrive in collaborative environments and am always excited to tackle new challenges.
           </p>
           {/* Optional: Add a profile image here */}
-          {/* <img src={profilePlaceholder} alt="Aditi Arya" className="w-40 h-40 rounded-full mx-auto my-6 border-4 border-accent-1" /> */}
+          {/* <img src={profilePlaceholder} alt="Rajath Acharya" className="w-40 h-40 rounded-full mx-auto my-6 border-4 border-accent-1" /> */}
         </motion.div>
 
         <h3 className="text-2xl font-semibold text-center text-accent-1 mb-8 font-mono">Education</h3>

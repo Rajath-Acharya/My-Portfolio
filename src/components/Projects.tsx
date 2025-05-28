@@ -1,12 +1,12 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import { projects } from '../data/portfolioData.jsx';
+import { projects } from '../data/portfolioData';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { motion, number } from 'framer-motion';
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: i => ({
+  visible: (i: number) => ({
     opacity: 1,
     scale: 1,
     transition: {
@@ -17,7 +17,7 @@ const cardVariants = {
   }),
 };
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project, index }: { project: any, index: number }) => {
   return (
     <motion.div
       className="bg-secondary-bg rounded-lg shadow-xl overflow-hidden flex flex-col group transform hover:-translate-y-2 transition-all duration-300"
@@ -40,7 +40,7 @@ const ProjectCard = ({ project, index }) => {
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-text-primary mb-1 font-mono">Tech Stack:</h4>
           <div className="flex flex-wrap gap-2">
-            {project.tech.map((tech, i) => (
+            {project.tech.map((tech: string, i: number) => (
               <span key={i} className="text-xs bg-primary-bg text-accent-1 px-2 py-1 rounded-full font-mono">
                 {tech}
               </span>

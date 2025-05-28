@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import { skills } from '../data/portfolioData.jsx';
+import { skills } from '../data/portfolioData';
 import { motion } from 'framer-motion';
 
 const skillCategoryVariants = {
@@ -17,7 +17,9 @@ const skillItemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const SkillCard = ({ name, icon }) => (
+type SkillCardProps = { name: string; icon: React.ReactNode };
+
+const SkillCard = ({ name, icon }: SkillCardProps) => (
   <motion.div
     variants={skillItemVariants}
     className="flex flex-col items-center p-4 bg-secondary-bg rounded-lg shadow-md hover:shadow-accent-1/10 transition-shadow duration-300"
