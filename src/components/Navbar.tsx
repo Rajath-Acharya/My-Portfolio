@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import { personalInfo, socialLinks } from '../data/portfolioData';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll";
+import { personalInfo, socialLinks } from "../data/portfolioData";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const navItems = [
-  { name: 'Home', to: 'hero' },
-  { name: 'About', to: 'about' },
-  { name: 'Skills', to: 'skills' },
-  { name: 'Projects', to: 'projects' },
-  { name: 'Experience', to: 'experience' },
-  { name: 'Contact', to: 'contact' },
+  { name: "Experience", to: "experience" },
+  { name: "Skills", to: "skills" },
+  { name: "About", to: "about" },
+  { name: "Contact", to: "contact" },
 ];
 
 const Navbar = () => {
@@ -21,8 +19,8 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -31,7 +29,9 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isOpen ? 'bg-secondary-bg shadow-lg py-4' : 'bg-transparent py-6'
+        isScrolled || isOpen
+          ? "bg-secondary-bg shadow-lg py-4"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -73,7 +73,10 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-accent-1 focus:outline-none">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-accent-1 focus:outline-none"
+          >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
@@ -83,7 +86,7 @@ const Navbar = () => {
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
+          animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
           className="md:hidden bg-secondary-bg mt-2 py-2"

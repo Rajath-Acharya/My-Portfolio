@@ -1,8 +1,8 @@
-import React from 'react';
-import SectionTitle from './SectionTitle';
-import { leadershipAndInvolvement } from '../data/portfolioData';
-import { FaAward, FaUsers, FaBriefcase } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React from "react";
+import SectionTitle from "./SectionTitle";
+import { workExperience } from "../data/portfolioData";
+import { FaAward, FaUsers, FaBriefcase } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const experienceItemVariants = {
   hidden: { opacity: 0, y: 30 }, // Adjusted y for a slightly different entry
@@ -12,7 +12,7 @@ const experienceItemVariants = {
     transition: {
       delay: i * 0.1, // Slightly faster stagger
       duration: 0.5,
-      ease: "easeOut"
+      ease: "easeOut",
     },
   }),
 };
@@ -21,16 +21,19 @@ const Experience = () => {
   const getIcon = (title: string) => {
     const lowerTitle = title.toLowerCase();
     const iconSize = "w-4 h-4 sm:w-5 sm:h-5"; // Centralized icon size
-    if (lowerTitle.includes("partner")) return <FaBriefcase className={`text-accent-1 ${iconSize}`} />;
-    if (lowerTitle.includes("executive")) return <FaUsers className={`text-accent-1 ${iconSize}`} />;
-    if (lowerTitle.includes("rank") || lowerTitle.includes("holder")) return <FaAward className={`text-accent-1 ${iconSize}`} />;
+    if (lowerTitle.includes("partner"))
+      return <FaBriefcase className={`text-accent-1 ${iconSize}`} />;
+    if (lowerTitle.includes("executive"))
+      return <FaUsers className={`text-accent-1 ${iconSize}`} />;
+    if (lowerTitle.includes("rank") || lowerTitle.includes("holder"))
+      return <FaAward className={`text-accent-1 ${iconSize}`} />;
     return <FaBriefcase className={`text-accent-1 ${iconSize}`} />; // Default
   };
 
   return (
     <section id="experience" className="py-20 bg-secondary-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle id="experience-title">Leadership & Involvement</SectionTitle>
+        <SectionTitle id="experience-title">Work Experience</SectionTitle>
 
         <div className="relative max-w-5xl mx-auto mt-12 sm:mt-16">
           {/* Central Timeline Line: Positioned to align with the center of the icon holder */}
@@ -40,7 +43,7 @@ const Experience = () => {
               w-0.5 is for the line width (approx 2px)
           */}
 
-          {leadershipAndInvolvement.map((item, index) => (
+          {workExperience.map((item, index) => (
             <motion.div
               key={index}
               className="mb-10 flex" // Use flex to align icon and content
@@ -59,21 +62,37 @@ const Experience = () => {
               {/* Content Card Column */}
               <div className="flex-grow p-4 sm:p-6 bg-primary-bg rounded-lg shadow-xl hover:shadow-accent-1/20 transition-shadow duration-300">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1 sm:mb-2">
-                  <h3 className="text-md sm:text-lg lg:text-xl font-semibold text-accent-1 font-mono">{item.role}</h3>
-                  <p className="text-xs sm:text-sm text-text-secondary/80 font-mono mt-1 sm:mt-0">{item.duration}</p>
+                  <h3 className="text-md sm:text-lg lg:text-xl font-semibold text-accent-1 font-mono">
+                    {item.role}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-text-secondary/80 font-mono mt-1 sm:mt-0">
+                    {item.duration}
+                  </p>
                 </div>
-                <p className="text-sm sm:text-md text-accent-2/90 font-semibold mb-2 sm:mb-3">{item.organization}</p>
-                
+                <p className="text-sm sm:text-md text-accent-2/90 font-semibold mb-2 sm:mb-3">
+                  {item.organization}
+                </p>
+                {item.platform && (
+                  <span className="inline-block bg-accent-1/10 text-accent-1 text-xs font-mono px-2 py-1 rounded mb-2 mr-2">
+                    {item.platform}
+                  </span>
+                )}
+
                 {item.points.length > 0 ? (
                   <ul className="list-disc list-inside space-y-1.5 text-text-secondary pl-1">
                     {item.points.map((point, i) => (
-                      <li key={i} className="text-xs sm:text-sm leading-relaxed sm:leading-normal">
+                      <li
+                        key={i}
+                        className="text-xs sm:text-sm leading-relaxed sm:leading-normal"
+                      >
                         {point}
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-text-secondary/80 italic text-xs sm:text-sm">Details forthcoming.</p>
+                  <p className="text-text-secondary/80 italic text-xs sm:text-sm">
+                    Details forthcoming.
+                  </p>
                 )}
               </div>
             </motion.div>

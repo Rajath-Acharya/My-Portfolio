@@ -65,64 +65,6 @@ export const education = [
   },
 ];
 
-export const projects = [
-  {
-    title: "AgriSure",
-    tech: ["React JS", "Node.js", "Express.js", "MongoDB"],
-    description:
-      "Improved financial access for over 12,000 farmers boosting microloan approvals by 35% via CIBIL-based lending, integrating AI insights, and Hindi support via Google Translation. Engineered the full-stack system, handling frontend UI, backend API and database management.",
-    date: "March 2025 – Present",
-    githubLink: "https://github.com/RajathAcharya37/AgriSure", // Replace with actual link
-    liveLink: null, // Replace with actual link if available
-    category: "Full Stack",
-    icon: <FaReact size={24} className="text-accent-1" />,
-  },
-  {
-    title: "BuildBridge",
-    tech: ["React JS", "Node.js", "Express.js", "MongoDB"],
-    description:
-      "Streamlined contracting for construction projects, reducing deal closure time by 40% via an AI-based platform matching builders with clients. Developed both frontend and backend, integrating user authentication, contract storage, and a responsive UI.",
-    date: "March 2025 – Present",
-    githubLink: "https://github.com/RajathAcharya37/BuildBridge", // Replace with actual link
-    liveLink: "https://build-bridge-seven.vercel.app/",
-    category: "Full Stack",
-    icon: <FaReact size={24} className="text-accent-1" />,
-  },
-  {
-    title: "FarmConnect",
-    tech: ["React JS", "Node.js", "Express.js", "MongoDB"],
-    description:
-      "Optimized crop storage for farmers, increasing warehouse occupancy by 25% via an AI-powered marketplace connecting farmers with warehouse owners. Developed a seamless booking system with real-time warehouse availability and farmer-friendly UI.",
-    date: "Feb 2025 – Present",
-    githubLink: "https://github.com/RajathAcharya37/FarmConnect",
-    liveLink: "https://farm-connect-iota-psi.vercel.app/",
-    category: "Full Stack",
-    icon: <FaReact size={24} className="text-accent-1" />,
-  },
-  {
-    title: "WealthWise",
-    tech: ["React JS", "Node JS", "Firebase", "API Integration"],
-    description:
-      "Enhanced financial literacy and user engagement by 40% through an interactive fintech platform integrating gamification. Developed an engaging React UI with gamified elements ensuring smooth user interactions.",
-    date: "Jan 2025 – Present",
-    githubLink: "https://github.com/RajathAcharya37/WealthWise",
-    liveLink: "https://wealthwisefinance.vercel.app/",
-    category: "Fintech",
-    icon: <SiFirebase size={24} className="text-accent-1" />,
-  },
-  {
-    title: "Blood Shortage Survey and Dashboard",
-    tech: ["React.js", "Node.js", "MongoDB"],
-    description:
-      "Increased efficiency of blood shortage tracking for healthcare organizations by 60% through a real-time analytics dashboard. Built an intuitive React.js dashboard with real-time charts and data visualizations.",
-    date: "Jan 2025 – Present",
-    githubLink: "https://github.com/RajathAcharya37/BloodLink", // Replace with actual link
-    liveLink: null,
-    category: "Healthcare",
-    icon: <FaDatabase size={24} className="text-accent-1" />,
-  },
-];
-
 export const skills = {
   languages: [
     { name: "JavaScript", icon: <SiJavascript /> },
@@ -170,32 +112,32 @@ export const skills = {
   ],
 };
 
-export const leadershipAndInvolvement = [
+export const workExperience = [
   {
-    role: "Junior Partner",
-    organization: "The Apex Circle (TAC)",
-    duration: "Jan 2025 – Present",
+    role: "Software Engineer",
+    organization: "Tech SMC Squared (carparts.com)",
+    duration: "June 2023 – Present",
+    platform: "E-Commerce",
     points: [
-      "Participated in over 15 hackathons and technical events, collaborating with peers to build innovative solutions.",
-      "Mentored juniors by sharing knowledge, guiding them in projects, and fostering a strong tech community.",
+      "Built a scalable micro-frontend architecture using Next.js and Module Federation, integrating Bloomreach CMS to power personalised content delivery while improving team velocity",
+      "Migrated analytics from GA3 to GA4 + Firebase, enhancing tracking and user behaviour insights",
+      "Implemented transactional and marketing push notifications using Blueshift in a Flutter WebView application",
+      "Optimized Web Core Vitals (LCP, INP, CLS), improving page performance and SEO rankings, with metrics monitored through BlueTriangle",
+      "Implemented Google OAuth authentication, streamlining the login process and directly increasing purchase conversions",
+      "Built an AI chatbot interface with NLP integration, enabling real-time conversational user experiences",
     ],
   },
   {
-    role: "Technical Executive",
-    organization: "Computer Society of India, CU Student Branch",
-    duration: "Nov 2024 – Present",
+    role: "Software Engineer",
+    organization: "Upskillist",
+    duration: "Dec 2020 – June 2023",
+    platform: "Ed-Tech",
     points: [
-      "Organized 5+ workshops, hackathons, and competitions to enhance student learning and engagement.",
-      "Coordinated with faculty and industry experts to bring technical opportunities to students.",
-    ],
-  },
-  {
-    role: "AMCAT 2nd Rank Holder",
-    organization: "Chandigarh University",
-    duration: "Sept 2024",
-    points: [
-      "Secured 2nd rank in AMCAT among 5500+ peers, showcasing strong analytical and problem-solving skills.",
-      "Demonstrated excellence in aptitude, coding, and domain-specific assessments, outperforming competition.",
+      "Built scalable B2B/B2C platforms with React, TypeScript, Gatsby, Node, and Express",
+      "Integrated SCORM Cloud and Google APIs to enhance LMS and contact management",
+      "Created interactive data visualizations using Chart.js",
+      "Developed a custom admin tool to streamline support workflows",
+      "Enhanced course discovery by implementing Algolia-powered search with text/voice input",
     ],
   },
 ];

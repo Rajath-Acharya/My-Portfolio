@@ -1,18 +1,21 @@
-import React from 'react';
-import { TypeAnimation } from 'react-type-animation';
-import { personalInfo, socialLinks } from '../data/portfolioData';
-import { FaDownload } from 'react-icons/fa';
-import { Link as ScrollLink } from 'react-scroll';
-import { motion } from 'framer-motion';
+import React from "react";
+import { TypeAnimation } from "react-type-animation";
+import { personalInfo, socialLinks } from "../data/portfolioData";
+import { FaDownload } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-primary-bg relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center bg-primary-bg relative overflow-hidden"
+    >
       {/* Optional: Subtle background elements if you want */}
       {/* <div className="absolute inset-0 opacity-5">
         <img src="/path/to/subtle-code-pattern.svg" alt="background pattern" className="w-full h-full object-cover"/>
       </div> */}
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,13 +31,13 @@ const Hero = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-secondary mb-6">
             <TypeAnimation
               sequence={[
-                'I build things for the web.',
+                "I build things for the web.",
                 2000,
-                'I am a Full Stack Developer.',
+                "I am a Full Stack Developer.",
                 2000,
-                'I love to code.',
+                "I love to code.",
                 2000,
-                'I solve problems.',
+                "I solve problems.",
                 2000,
               ]}
               wrapper="span"
@@ -54,15 +57,6 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12"
         >
-          <ScrollLink
-            to="projects"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="px-8 py-3 font-mono text-lg bg-accent-1 text-primary-bg rounded-md hover:bg-opacity-80 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-accent-1/30"
-          >
-            View My Work
-          </ScrollLink>
           <a
             href={personalInfo.resumeLink}
             target="_blank"
@@ -86,23 +80,34 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-accent-1 transition-colors"
-              aria-label={link.url.split(':')[0]} // For accessibility e.g., "mailto", "https"
+              aria-label={link.url.split(":")[0]} // For accessibility e.g., "mailto", "https"
             >
               {React.cloneElement(link.icon, { size: 28 })}
             </a>
           ))}
         </motion.div>
       </div>
-      
+
       {/* Scroll down indicator (optional) */}
-      <ScrollLink 
-        to="about" 
-        smooth={true} 
-        duration={800} 
+      <ScrollLink
+        to="about"
+        smooth={true}
+        duration={800}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-8 w-8 text-accent-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </ScrollLink>
     </section>
