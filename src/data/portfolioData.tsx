@@ -1,37 +1,67 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaReact, FaNodeJs, FaDatabase, FaCode, FaHtml5, FaCss3Alt, FaWordpress, FaFigma } from 'react-icons/fa'; // Example icons
-import { SiExpress, SiMongodb, SiFirebase, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiPython } from 'react-icons/si'; // More specific tech icons
+import React from "react";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+  FaCode,
+  FaHtml5,
+  FaCss3Alt,
+  FaWordpress,
+  FaFigma,
+} from "react-icons/fa"; // Example icons
+import {
+  SiExpress,
+  SiMongodb,
+  SiFirebase,
+  SiTailwindcss,
+  SiJavascript,
+  SiTypescript,
+  SiCplusplus,
+  SiPython,
+  SiDart,
+  SiGo,
+  SiNextdotjs,
+  SiGatsby,
+  SiFlutter,
+  SiPostgresql,
+  SiShadcnui,
+  SiRadixui,
+} from "react-icons/si"; // More specific tech icons
 
 export const personalInfo = {
   name: "Rajath Acharya",
   title: "Full Stack Developer",
-  email: "RajathAcharya1511@gmail.com",
-  phone: "+91 8865818466",
-  linkedin: "https://linkedin.com/in/RajathAcharya37",
-  github: "https://github.com/RajathAcharya37",
+  email: "rajath365@gmail.com",
+  phone: "+91 7259120316",
+  linkedin: "https://www.linkedin.com/in/rajath-acharya-068194135/",
+  github: "https://github.com/Rajath-Acharya/",
   resumeLink: "/RajathCV.pdf", // Make sure your resume is in public/
   bio: "Innovative Full Stack Developer passionate about creating seamless and impactful web solutions. Eager to leverage modern technologies to solve real-world problems and contribute to dynamic team environments.",
-  shortBio: "I build things for the web." // For Hero section
+  shortBio: "I build things for the web.", // For Hero section
 };
 
 export const education = [
   {
-    institution: "Chandigarh University",
-    degree: "Bachelor of Engineering in Computer Science",
-    duration: "Aug 2023 – Present",
-    score: "CGPA: 8.17/10",
+    institution: "NMAM Institute of Technology, Nitte",
+    degree: "Bachelor of Engineering",
+    duration: "Aug 2015 – June 2019",
+    score: "CGPA: 8.18/10",
   },
   {
-    institution: "Namdev Public School",
-    degree: "Class 12th CBSE",
-    duration: "April 2022 - May 2023",
-    score: "96.5%",
+    institution: "Excellent PU College, Moodbidri",
+    degree: "Pre University",
+    duration: "June 2013 - May 2015",
+    score: "92.33%",
   },
   {
-    institution: "Namdev Public School",
-    degree: "Class 10th CBSE",
-    duration: "April 2020 - May 2021",
-    score: "95.17%",
+    institution: "Jain High School, Moodbidri",
+    degree: "SSLC",
+    duration: "June 2010 - May 2013",
+    score: "87.84%",
   },
 ];
 
@@ -39,78 +69,95 @@ export const projects = [
   {
     title: "AgriSure",
     tech: ["React JS", "Node.js", "Express.js", "MongoDB"],
-    description: "Improved financial access for over 12,000 farmers boosting microloan approvals by 35% via CIBIL-based lending, integrating AI insights, and Hindi support via Google Translation. Engineered the full-stack system, handling frontend UI, backend API and database management.",
+    description:
+      "Improved financial access for over 12,000 farmers boosting microloan approvals by 35% via CIBIL-based lending, integrating AI insights, and Hindi support via Google Translation. Engineered the full-stack system, handling frontend UI, backend API and database management.",
     date: "March 2025 – Present",
     githubLink: "https://github.com/RajathAcharya37/AgriSure", // Replace with actual link
     liveLink: null, // Replace with actual link if available
     category: "Full Stack",
-    icon: <FaReact size={24} className="text-accent-1"/>
+    icon: <FaReact size={24} className="text-accent-1" />,
   },
   {
     title: "BuildBridge",
     tech: ["React JS", "Node.js", "Express.js", "MongoDB"],
-    description: "Streamlined contracting for construction projects, reducing deal closure time by 40% via an AI-based platform matching builders with clients. Developed both frontend and backend, integrating user authentication, contract storage, and a responsive UI.",
+    description:
+      "Streamlined contracting for construction projects, reducing deal closure time by 40% via an AI-based platform matching builders with clients. Developed both frontend and backend, integrating user authentication, contract storage, and a responsive UI.",
     date: "March 2025 – Present",
     githubLink: "https://github.com/RajathAcharya37/BuildBridge", // Replace with actual link
     liveLink: "https://build-bridge-seven.vercel.app/",
     category: "Full Stack",
-    icon: <FaReact size={24} className="text-accent-1"/>
+    icon: <FaReact size={24} className="text-accent-1" />,
   },
   {
     title: "FarmConnect",
     tech: ["React JS", "Node.js", "Express.js", "MongoDB"],
-    description: "Optimized crop storage for farmers, increasing warehouse occupancy by 25% via an AI-powered marketplace connecting farmers with warehouse owners. Developed a seamless booking system with real-time warehouse availability and farmer-friendly UI.",
+    description:
+      "Optimized crop storage for farmers, increasing warehouse occupancy by 25% via an AI-powered marketplace connecting farmers with warehouse owners. Developed a seamless booking system with real-time warehouse availability and farmer-friendly UI.",
     date: "Feb 2025 – Present",
     githubLink: "https://github.com/RajathAcharya37/FarmConnect",
     liveLink: "https://farm-connect-iota-psi.vercel.app/",
     category: "Full Stack",
-    icon: <FaReact size={24} className="text-accent-1"/>
+    icon: <FaReact size={24} className="text-accent-1" />,
   },
   {
     title: "WealthWise",
     tech: ["React JS", "Node JS", "Firebase", "API Integration"],
-    description: "Enhanced financial literacy and user engagement by 40% through an interactive fintech platform integrating gamification. Developed an engaging React UI with gamified elements ensuring smooth user interactions.",
+    description:
+      "Enhanced financial literacy and user engagement by 40% through an interactive fintech platform integrating gamification. Developed an engaging React UI with gamified elements ensuring smooth user interactions.",
     date: "Jan 2025 – Present",
     githubLink: "https://github.com/RajathAcharya37/WealthWise",
     liveLink: "https://wealthwisefinance.vercel.app/",
     category: "Fintech",
-    icon: <SiFirebase size={24} className="text-accent-1"/>
+    icon: <SiFirebase size={24} className="text-accent-1" />,
   },
   {
     title: "Blood Shortage Survey and Dashboard",
     tech: ["React.js", "Node.js", "MongoDB"],
-    description: "Increased efficiency of blood shortage tracking for healthcare organizations by 60% through a real-time analytics dashboard. Built an intuitive React.js dashboard with real-time charts and data visualizations.",
+    description:
+      "Increased efficiency of blood shortage tracking for healthcare organizations by 60% through a real-time analytics dashboard. Built an intuitive React.js dashboard with real-time charts and data visualizations.",
     date: "Jan 2025 – Present",
     githubLink: "https://github.com/RajathAcharya37/BloodLink", // Replace with actual link
     liveLink: null,
     category: "Healthcare",
-    icon: <FaDatabase size={24} className="text-accent-1"/>
+    icon: <FaDatabase size={24} className="text-accent-1" />,
   },
 ];
 
 export const skills = {
   languages: [
-    { name: "C/C++", icon: <SiCplusplus /> },
     { name: "JavaScript", icon: <SiJavascript /> },
-    // { name: "TypeScript", icon: <SiTypescript /> }, // Add if you use it
-    { name: "HTML5", icon: <FaHtml5 /> },
-    { name: "CSS3", icon: <FaCss3Alt /> },
+    { name: "TypeScript", icon: <SiTypescript /> },
+    { name: "Dart", icon: <SiDart /> },
+    { name: "Go", icon: <SiGo /> },
     { name: "SQL", icon: <FaDatabase /> },
   ],
   frameworksAndLibraries: [
     { name: "React JS", icon: <FaReact /> },
+    { name: "Next JS", icon: <SiNextdotjs /> },
+    { name: "Gatsby JS", icon: <SiGatsby /> },
     { name: "Node JS", icon: <FaNodeJs /> },
     { name: "Express JS", icon: <SiExpress /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss /> }, // You are using it!
-    { name: "Wordpress", icon: <FaWordpress /> },
+    { name: "Flutter", icon: <SiFlutter /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    { name: "Shadcn UI", icon: <SiShadcnui /> },
+    { name: "Radix UI", icon: <SiRadixui /> },
   ],
   toolsAndPlatforms: [
     { name: "MongoDB", icon: <SiMongodb /> },
+    { name: "PostgreSQL", icon: <SiPostgresql /> },
     { name: "Firebase", icon: <SiFirebase /> },
     { name: "Git & GitHub", icon: <FaGithub /> },
-    { name: "VS Code", icon: <FaCode /> }, // Or a more specific icon
+    { name: "VS Code", icon: <FaCode /> },
     { name: "Postman", icon: <FaCode /> }, // Placeholder icon
-    { name: "Google Cloud Platform", icon: <FaCode /> }, // Placeholder icon
+    { name: "Blue Triangle", icon: <FaCode /> }, // Placeholder icon
+    { name: "New Relic", icon: <FaCode /> }, // Placeholder icon
+    { name: "Blueshift", icon: <FaCode /> }, // Placeholder icon
+    { name: "Storybook", icon: <FaCode /> }, // Placeholder icon
+    { name: "Fullstory", icon: <FaCode /> }, // Placeholder icon
+    { name: "Cypress", icon: <FaCode /> }, // Placeholder icon
+    { name: "Bloomreach CMS", icon: <FaCode /> }, // Placeholder icon
+    { name: "Lamda Test", icon: <FaCode /> }, // Placeholder icon
+    { name: "GTM", icon: <FaCode /> }, // Placeholder icon
   ],
   coreCompetencies: [
     "Problem Solving",
@@ -118,8 +165,8 @@ export const skills = {
     "Oratory",
     "Team Leadership",
     "Event Hosting",
-    "Agile Methodologies"
-  ]
+    "Agile Methodologies",
+  ],
 };
 
 export const leadershipAndInvolvement = [
@@ -155,6 +202,9 @@ export const leadershipAndInvolvement = [
 export const socialLinks = {
   linkedin: { url: personalInfo.linkedin, icon: <FaLinkedin size={24} /> },
   github: { url: personalInfo.github, icon: <FaGithub size={24} /> },
-  email: { url: `mailto:${personalInfo.email}`, icon: <FaEnvelope size={24} /> },
+  email: {
+    url: `mailto:${personalInfo.email}`,
+    icon: <FaEnvelope size={24} />,
+  },
   // phone: { url: `tel:${personalInfo.phone}`, icon: <FaPhone size={24} /> }, // Optional
 };

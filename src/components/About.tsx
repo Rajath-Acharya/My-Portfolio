@@ -1,8 +1,8 @@
-import React from 'react';
-import SectionTitle from './SectionTitle';
-import { personalInfo, education } from '../data/portfolioData';
-import { motion } from 'framer-motion';
-import { FaUniversity, FaSchool } from 'react-icons/fa'; // Example icons
+import React from "react";
+import SectionTitle from "./SectionTitle";
+import { education } from "../data/portfolioData";
+import { motion } from "framer-motion";
+import { FaUniversity, FaSchool } from "react-icons/fa"; // Example icons
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -21,8 +21,8 @@ const About = () => {
     <section id="about" className="py-20 bg-secondary-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle id="about-title">About Me</SectionTitle>
-        
-        <motion.div 
+
+        <motion.div
           className="max-w-3xl mx-auto text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,13 +30,22 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-text-secondary leading-relaxed">
-            Hello! I'm Rajath, a driven Full Stack Developer with a strong foundation in computer science and a knack for crafting efficient, user-centric applications. My journey into tech is fueled by a desire to learn, innovate, and contribute to projects that make a difference. I thrive in collaborative environments and am always excited to tackle new challenges.
+            Hello! I'm Rajath, a Full Stack Developer with 4.6+ years of
+            experience building scalable, user-centric applications. My
+            expertise spans the entire development lifecycle, from ideation to
+            deployment, and I thrive on solving complex problems with clean,
+            efficient code. Passionate about continuous learning and innovation,
+            I leverage my strong CS foundation to deliver impactful
+            solutions—whether working solo or collaborating in agile teams.
+            Let’s connect and create something great!{" "}
           </p>
           {/* Optional: Add a profile image here */}
           {/* <img src={profilePlaceholder} alt="Rajath Acharya" className="w-40 h-40 rounded-full mx-auto my-6 border-4 border-accent-1" /> */}
         </motion.div>
 
-        <h3 className="text-2xl font-semibold text-center text-accent-1 mb-8 font-mono">Education</h3>
+        <h3 className="text-2xl font-semibold text-center text-accent-1 mb-8 font-mono">
+          Education
+        </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {education.map((edu, index) => (
             <motion.div
@@ -49,15 +58,22 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
             >
               <div className="flex items-center mb-3">
-                {edu.institution.toLowerCase().includes("university") ? 
-                  <FaUniversity className="text-accent-1 mr-3 text-2xl" /> : 
+                {edu.institution.toLowerCase().includes("university") ? (
+                  <FaUniversity className="text-accent-1 mr-3 text-2xl" />
+                ) : (
                   <FaSchool className="text-accent-1 mr-3 text-2xl" />
-                }
-                <h4 className="text-xl font-semibold text-text-primary">{edu.institution}</h4>
+                )}
+                <h4 className="text-xl font-semibold text-text-primary">
+                  {edu.institution}
+                </h4>
               </div>
               <p className="text-text-secondary font-medium">{edu.degree}</p>
-              <p className="text-sm text-text-secondary font-mono">{edu.duration}</p>
-              <p className="text-sm text-accent-1 font-mono mt-1">{edu.score}</p>
+              <p className="text-sm text-text-secondary font-mono">
+                {edu.duration}
+              </p>
+              <p className="text-sm text-accent-1 font-mono mt-1">
+                {edu.score}
+              </p>
             </motion.div>
           ))}
         </div>
