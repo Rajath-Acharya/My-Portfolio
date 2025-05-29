@@ -160,12 +160,13 @@ export const skills = {
     { name: "GTM", icon: <FaCode /> }, // Placeholder icon
   ],
   coreCompetencies: [
+    "Analytical Thinking",
+    "Pragmatic Prioritization",
     "Problem Solving",
-    "Presentations",
-    "Oratory",
-    "Team Leadership",
-    "Event Hosting",
+    "Adaptability",
+    "Precision in Code & Communication",
     "Agile Methodologies",
+    "Continuous Learning",
   ],
 };
 
