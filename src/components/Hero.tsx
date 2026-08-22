@@ -31,13 +31,13 @@ const Hero = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-secondary mb-6">
             <TypeAnimation
               sequence={[
-                "I build things for the web.",
+                `I am a ${personalInfo.title}.`,
                 2000,
-                "I am a Full Stack Developer.",
+                "I build scalable web experiences.",
                 2000,
-                "I love to code.",
+                "I turn ideas into reliable products.",
                 2000,
-                "I solve problems.",
+                "I solve meaningful problems.",
                 2000,
               ]}
               wrapper="span"
@@ -77,10 +77,10 @@ const Hero = () => {
             <a
               key={index}
               href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={link.url.startsWith("http") ? "_blank" : undefined}
+              rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
               className="text-text-secondary hover:text-accent-1 transition-colors"
-              aria-label={link.url.split(":")[0]} // For accessibility e.g., "mailto", "https"
+              aria-label={link.label}
             >
               {React.cloneElement(link.icon, { size: 28 })}
             </a>

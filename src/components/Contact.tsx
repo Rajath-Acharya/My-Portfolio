@@ -28,7 +28,9 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-            I'm currently open to new opportunities and collaborations. Whether you have a project in mind, a question, or just want to say hi, my inbox is always open. I'll try my best to get back to you!
+            I'm currently open to new opportunities and collaborations. Whether
+            you have a project in mind, a question, or simply want to connect,
+            feel free to reach out.
           </p>
           <a
             href={`mailto:${personalInfo.email}`}
@@ -42,10 +44,10 @@ const Contact = () => {
               <motion.a
                 key={key}
                 href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.url.startsWith("http") ? "_blank" : undefined}
+                rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="text-text-secondary hover:text-accent-1 transition-colors"
-                aria-label={key}
+                aria-label={link.label}
                 variants={contactItemVariants}
                 initial="hidden"
                 whileInView="visible"

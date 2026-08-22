@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const navItems = [
+  { name: "Selected Work", to: "work" },
   { name: "Experience", to: "experience" },
   { name: "Skills", to: "skills" },
   { name: "About", to: "about" },
@@ -14,6 +15,13 @@ const navItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const activateOnEnter = (event: React.KeyboardEvent<HTMLElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      event.currentTarget.click();
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +47,9 @@ const Navbar = () => {
           to="hero"
           smooth={true}
           duration={500}
+          role="link"
+          tabIndex={0}
+          onKeyDown={activateOnEnter}
           className="text-2xl font-bold font-mono text-accent-1 cursor-pointer hover:opacity-80 transition-opacity"
         >
           {personalInfo.name}
@@ -57,6 +68,9 @@ const Navbar = () => {
               className="text-text-secondary hover:text-accent-1 font-mono transition-colors cursor-pointer"
               activeClass="text-accent-1"
               spy={true}
+              role="link"
+              tabIndex={0}
+              onKeyDown={activateOnEnter}
             >
               {item.name}
             </ScrollLink>
@@ -76,6 +90,9 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-accent-1 focus:outline-none"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -90,6 +107,7 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
           className="md:hidden bg-secondary-bg mt-2 py-2"
+          id="mobile-navigation"
         >
           {navItems.map((item) => (
             <ScrollLink
@@ -101,6 +119,9 @@ const Navbar = () => {
               className="block px-4 py-3 text-text-secondary hover:text-accent-1 hover:bg-primary-bg font-mono transition-colors cursor-pointer"
               activeClass="text-accent-1 bg-primary-bg"
               spy={true}
+              role="link"
+              tabIndex={0}
+              onKeyDown={activateOnEnter}
               onClick={() => setIsOpen(false)}
             >
               {item.name}

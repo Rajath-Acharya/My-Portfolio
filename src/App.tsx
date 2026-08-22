@@ -1,20 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import SelectedWork from "./components/SelectedWork";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop"; // Optional
 
 function App() {
-  useEffect(() => {
-    if (window && (window as any).dataLayer) {
-      (window as any).dataLayer.push({ event: "page_view" });
-    }
-  }, []);
-
   return (
     <div className="App">
       <Navbar />
@@ -23,6 +18,7 @@ function App() {
         <About />
         <Skills />
         <Experience />
+        <SelectedWork />
         <Contact />
       </main>
       <Footer />

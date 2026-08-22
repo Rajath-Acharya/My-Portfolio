@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
-import { education } from "../data/portfolioData";
+import { awards, certifications, education } from "../data/portfolioData";
 import { motion } from "framer-motion";
 import { FaUniversity, FaSchool } from "react-icons/fa"; // Example icons
 
@@ -30,14 +30,10 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-text-secondary leading-relaxed">
-            Hello! I'm Rajath, a Full Stack Developer with 4.6+ years of
-            experience building scalable, user-centric applications. My
-            expertise spans the entire development lifecycle, from ideation to
-            deployment, and I thrive on solving complex problems with clean,
-            efficient code. Passionate about continuous learning and innovation,
-            I leverage my strong CS foundation to deliver impactful
-            solutions—whether working solo or collaborating in agile teams.
-            Let’s connect and create something great!{" "}
+            I’m Rajath, a Software Engineer who enjoys turning ideas into fast,
+            reliable web experiences. I’m curious, detail-oriented, and enjoy
+            collaborating with teams to solve meaningful product problems.
+            Outside work, I enjoy bike riding, chess, and Sudoku.
           </p>
           {/* Optional: Add a profile image here */}
           {/* <img src={profilePlaceholder} alt="Rajath Acharya" className="w-40 h-40 rounded-full mx-auto my-6 border-4 border-accent-1" /> */}
@@ -76,6 +72,29 @@ const About = () => {
               </p>
             </motion.div>
           ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+          <div className="bg-primary-bg p-6 rounded-lg shadow-xl">
+            <h3 className="text-xl font-semibold text-accent-1 mb-4 font-mono">
+              Courses & Certificates
+            </h3>
+            <ul className="space-y-2 text-text-secondary list-disc list-inside">
+              {certifications.map((certification) => (
+                <li key={certification}>{certification}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-primary-bg p-6 rounded-lg shadow-xl">
+            <h3 className="text-xl font-semibold text-accent-1 mb-4 font-mono">
+              Awards at Tech SMC Squared
+            </h3>
+            <ul className="space-y-2 text-text-secondary list-disc list-inside">
+              {awards.map((award) => (
+                <li key={award}>{award}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

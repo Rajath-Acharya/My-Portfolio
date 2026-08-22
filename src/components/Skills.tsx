@@ -36,22 +36,32 @@ const Skills = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle id="skills-title">My Tech Arsenal</SectionTitle>
         
-        <div className="space-y-12">
+        <div className="space-y-8">
           {/* Languages */}
           <motion.div variants={skillCategoryVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
             <h3 className="text-2xl font-semibold text-accent-2 mb-6 font-mono text-center sm:text-left">Languages</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
               {skills.languages.map((skill, index) => (
                 <SkillCard key={index} name={skill.name} icon={skill.icon} />
               ))}
             </div>
           </motion.div>
 
-          {/* Frameworks & Libraries */}
+          {/* Frontend */}
           <motion.div variants={skillCategoryVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-            <h3 className="text-2xl font-semibold text-accent-2 mb-6 font-mono text-center sm:text-left">Frameworks & Libraries</h3>
+            <h3 className="text-2xl font-semibold text-accent-2 mb-6 font-mono text-center sm:text-left">Frontend</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {skills.frameworksAndLibraries.map((skill, index) => (
+              {skills.frontend.map((skill, index) => (
+                <SkillCard key={index} name={skill.name} icon={skill.icon} />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Backend & Cloud */}
+          <motion.div variants={skillCategoryVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+            <h3 className="text-2xl font-semibold text-accent-2 mb-6 font-mono text-center sm:text-left">Backend & Cloud</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {skills.backendAndCloud.map((skill, index) => (
                 <SkillCard key={index} name={skill.name} icon={skill.icon} />
               ))}
             </div>

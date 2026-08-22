@@ -12,7 +12,7 @@ const SectionTitle = ({ children, id }: { children: ReactNode; id: string }) => 
       transition={{ duration: 0.5 }}
     >
       <span className="relative z-10">{children}</span>
-      <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl sm:text-7xl font-bold text-secondary-bg opacity-30 z-0">
+      <span aria-hidden="true" className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl sm:text-7xl font-bold text-secondary-bg opacity-30 z-0">
         {children}
       </span>
     </motion.h2>
