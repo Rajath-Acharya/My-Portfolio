@@ -97,7 +97,6 @@ export const skills = {
     { name: "CSS", icon: <FaCss3Alt /> },
     { name: "Dart", icon: <SiDart /> },
     { name: "C++", icon: <SiCplusplus /> },
-    { name: "SQL", icon: <FaDatabase /> },
   ],
   frontend: [
     { name: "React JS", icon: <FaReact /> },
